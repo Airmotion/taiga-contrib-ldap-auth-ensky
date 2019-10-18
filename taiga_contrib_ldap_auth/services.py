@@ -51,9 +51,10 @@ def _slugify(username: str):
     #username = username.replace('+', '-')
     #username = username.replace('@', '-')
     # example: force lower-case
+    x = username.split("@")
     #username = username.lower()
 
-    return username
+    return x[0].lower()
 
 
 def ldap_login_func(request):
